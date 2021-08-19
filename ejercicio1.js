@@ -17,15 +17,64 @@
 // Cantidad de creditos a registrar.
 
 //-----------------------------------METODO TRADICIONAL CONDICIONAL IF AND ELSE IF-------------------------------------------------
+/*
+let number2 = 12345;
+let dm= number2%10;
+let aux1= number2/10;
+let um=aux1%10;
+let c=(aux1/10)%10;
+
+
+let number = 1234566666666666;
+let inverNum = "";
+
+while (number > 0) {
+    inverNum += number%10;
+    number=parseInt(number/10);
+}
+console.log(inverNum);
+
+*/
+
+/*
+function reverseNumber(number) {
+
+    let inverNum = "";
+
+    while (number > 0) {
+        inverNum += number%10;
+        number=parseInt(number/10);
+        
+    }
+    return inverNum;
+}
+let result=reverseNumber(658965865);
+console.log(result);
+ */
+
+const reverseNumber = (number) =>{
+
+    let inverNum = "";
+
+    while (number > 0) {
+        inverNum += number%10;
+        number=parseInt(number/10);
+    }
+    return inverNum;
+}
+let result=reverseNumber(658965865);
+console.log(result);
+
 
 function calcular() {
     
-promedio=parseFloat(prompt("Digite el promedio"));
-programa=prompt("Digite el programa - Pregrado o Posgrado");
-//Programa=document.getElementById("programa");
-//promedio = parseFloat(document.getElementById('prom'));
+//promedio=parseFloat(prompt("Digite el promedio"));
+//programa=prompt("Digite el programa - Pregrado o Posgrado");    
+programa=document.getElementById("programa").value;
+promedio = parseFloat(document.getElementById('prom').value);
+let mensaje1 = `document.getElementById("credito").innerHTML`;
 
-let credito;
+let credito;    
 let descuento;
 let ValCreditoPre = 50000;
 let ValCreditoPos = 300000;
@@ -35,7 +84,7 @@ if (promedio >= 4.5 && programa == "Pregrado") {
     credito=28;
     descuento=0.75;
     TotalMatricula=(ValCreditoPre*credito)*descuento;
-    document.getElementById("credito").innerHTML = credito;
+   mensaje1 = credito;
     document.getElementById("matricula").innerHTML = TotalMatricula;
     document.getElementById("descuento").innerHTML = "25%";
     document.getElementById("valorCredito").innerHTML = ValCreditoPre;
