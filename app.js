@@ -62,6 +62,8 @@ myArray.forEach((i)=>{//Se quita la palabra funcion y se agrega la flecha despue
     console.log(i*i);
 })
 */
+
+/*
 let names=["pedro", "camila", "pablo", "maria"];
 let ages=[17,21,45,19];
 
@@ -77,3 +79,19 @@ const getName=(age)=>{
     return names[index];
 }
 console.log(getName(19))
+*/
+/*
+let myArray=[1,3,5,7];
+let data = myArray.map((i)=>{
+    return i*2;
+});
+//let newArray = data;
+console.log(data);
+*/
+let data = myArray.filter((i)=>{
+    if(i%2 !=0){
+      return i;
+}
+
+});
+console.log(data);
