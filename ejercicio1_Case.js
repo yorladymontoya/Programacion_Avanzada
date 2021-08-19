@@ -18,32 +18,28 @@
 
 
 
-function calculos() {
+function calcular() {
 
-promedio=parseFloat(document.getElementById('prom'));
+    promedio=parseFloat(prompt("Digite el promedio"));
+    programa=prompt("Digite el programa - Pregrado o Posgrado");    
+//promedio=parseFloat(document.getElementById('prom'));
 //let promedio=4.5;
 
-let Programa=document.getElementById("programa");
+//let Programa=document.getElementById("programa");
 
 let ValCreditoPre = 50000;
 let ValCreditoPos = 300000;
 let TotalMatricula;
 
-document.getElementById("credito").innerHTML = "28";
-document.getElementById("matricula").innerHTML = TotalMatricula;
-document.getElementById("valorCredito").innerHTML = ValCreditoPre;
-
-switch (Programa) {
-
-
+switch (programa) {
     case "Pregrado":
         if (promedio >= 4.5) {
-            alert(promedio);
+        
             TotalMatricula=(ValCreditoPre*28)*0.75;
-          //  document.getElementById("credito").innerHTML = "28";
-         //   document.getElementById("credito").innerHTML = "Hello JavaScript!"
-           // document.getElementById("matricula").value = TotalMatricula;
-           // document.getElementById("valorCredito").value = ValCreditoPre;
+            document.getElementById("credito").innerHTML = "28";
+            document.getElementById("descuento").innerHTML = "25%"
+            document.getElementById("matricula").innerHTML = TotalMatricula;
+            document.getElementById("valorCredito").innerHTML = ValCreditoPre;
            
         }else if(promedio >= 4.0 && promedio < 4.5){
             TotalMatricula=(ValCreditoPre*25)*0.90;
